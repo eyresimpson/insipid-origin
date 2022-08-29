@@ -45,6 +45,11 @@ public class PackageController {
                         "state: \"uninstalled\"," +
                         "}"
         );
+
+        arr.put(JSONUtil.parseObj(obj.toJSONString(0)));
+        obj.set("name","Hhh");
+        arr.put(JSONUtil.parseObj(obj.toJSONString(0)));
+        obj.set("name","Lon");
         arr.put(obj);
         return (T) arr;
     }

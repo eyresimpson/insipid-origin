@@ -1,0 +1,4 @@
+server:
+  port: 2998
+  servlet:
+    context-path: /insipid
