@@ -14,20 +14,6 @@ public class PackageController {
     // 获取应用列表
     @GetMapping("/list")
     public <T> T getList() {
-//        {
-        //   name,
-        //   type: "script",
-        //   description: "一个简单的脚本",
-        //   author: "aine",
-        //   updateTime: new Date(),
-        //   downloadCount: 0,
-        //   grade: 0,
-        //   picture: [],
-        //   size: "1220kb",
-        //   language: "zh-CN",
-        //   cost: "0￥",
-        //   state: "uninstalled",
-        // }
         JSONArray arr = new JSONArray();
         JSONObject obj = JSONUtil.parseObj(
                 "{" +
