@@ -19,7 +19,7 @@ public class PackageController {
                 "{" +
                         "name:\"test\"," +
                         "type: \"script\"," +
-                        "description: \"非常好\"," +
+                        "description: \"一个用于测试的软件包，没有实际意义\"," +
                         "author: \"aine\"," +
                         "updateTime: new Date()," +
                         "downloadCount: 0," +
@@ -36,6 +36,7 @@ public class PackageController {
         obj.set("name","Hhh");
         arr.put(JSONUtil.parseObj(obj.toJSONString(0)));
         obj.set("name","Lon");
+        obj.set("state","installed");
         arr.put(obj);
         return (T) arr;
     }
