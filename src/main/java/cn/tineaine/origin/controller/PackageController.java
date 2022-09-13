@@ -3,6 +3,8 @@ package cn.tineaine.origin.controller;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import cn.tineaine.origin.service.PackageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "app")
 public class PackageController {
+
+    @Autowired
+    PackageService packageService;
     // 获取应用列表
     @GetMapping("/list")
     public <T> T getList() {
+        packageService.getPackageList();
         JSONArray arr = new JSONArray();
         JSONObject obj = JSONUtil.parseObj(
                 "{" +
