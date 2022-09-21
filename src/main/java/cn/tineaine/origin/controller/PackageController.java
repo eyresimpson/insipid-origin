@@ -23,8 +23,9 @@ public class PackageController {
         JSONArray arr = new JSONArray();
         JSONObject obj = JSONUtil.parseObj(
                 "{" +
-                        "name:\"test\"," +
+                        "name:\"Redis控制台\"," +
                         "type: \"script\"," +
+                        "icon: \"https://github.githubassets.com/images/modules/profile/achievements/arctic-code-vault-contributor-default.png\"," +
                         "description: \"一个用于测试的软件包，没有实际意义\"," +
                         "author: \"aine\"," +
                         "updateTime: new Date()," +
@@ -39,9 +40,10 @@ public class PackageController {
         );
 
         arr.put(JSONUtil.parseObj(obj.toJSONString(0)));
-        obj.set("name","Hhh");
+        obj.set("name","Java环境部署");
+        obj.set("icon","https://avatars.githubusercontent.com/u/112532863?s=64&v=4");
         arr.put(JSONUtil.parseObj(obj.toJSONString(0)));
-        obj.set("name","Lon");
+        obj.set("name","Python环境部署");
         obj.set("state","installed");
         arr.put(obj);
         return (T) arr;
